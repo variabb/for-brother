@@ -1,14 +1,14 @@
 const steps = [
   {
-    title: "Етап 1: Знеболення",
+    title: "Сеанс 1: Ти не один, я завжди з тобою",
     content:
-      "Обійми з доставкою просто в серце! <br><br> *надсилаю віртуальні обіймашки* <img class='second-cats' src='/src/catshugs2.jpg' alt=''> ",
+      "Обійми з доставкою просто в серце! <br><br> <img class='second-cats' src='https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjAxNmwzcHFlZWtiYWR0MnEyMTNrYThleW1wN3BpODlidjlyZjQzdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uWANBaCInyRadBfUtX/giphy.gif' alt=''> <br>Для когось ти Артем Олесандрович, <br>а для мене - Лисеня ",
   },
   {
-    title: "Етап 2: Перевірка настрою",
+    title: "Сеанс 2: Перевірка настрою",
     content: `
     <p class="step-two-title">Як ти зараз себе почуваєш?</p>
-    <button class="mood-btn" onclick="showMood('good')">😊 Добре</button>
+    <button class="mood-btn" onclick="showMood('good')">😊 Ок</button>
     <button class="mood-btn" onclick="showMood('meh')">😐 Таке</button>
     <button class="mood-btn" onclick="showMood('bad')">😢 Не дуже</button>
     <div id="moodResult" style="margin-top: 20px;"></div>
@@ -16,29 +16,32 @@ const steps = [
   },
 
   {
-    title: "Етап 3: Вітаміни",
+    title: "Cанс 3: Вітаміни",
     content: `
     <div class="flip-card" onclick="flipCard(this)">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-      🧾 те, що лікар прописав <br>
+      🧾 те, що сістер прописала <br>
            (натисни на рецепт)
         </div>
         <div class="flip-card-back">
-          Вітамін Ц — цьом 💋<br>
-          Вітамін К — котики 🐱<br>
-          Вітамін Ф — фільмик 🎬<br><br>
-          Приймати кожен день
-          <br><br>
+          Вітамін О — <br> Обіймашка <br><br>
+          Вітамін Щ — <br> Ще одна обіймашка <br><br>
+          Вітамін Б —  <br> Багато-багато обіймашок <br><br>
+         
         </div>
+  
+        
       </div>
+          
     </div>
+      <p>Приймати кожен день</p>
   `,
   },
   {
-    title: "Виписка пацієнта",
+    title: "Заключення",
     content:
-      'Ти успішно пройшов курс ❤️<br><br>Заборонено: кусатися і їсти тверде (ну, майже) <br> <img  class="last-cat" src="https://media.giphy.com/media/3oz8xsaLjLVqVXr3tS/giphy.gif"  style="width:100%; border-radius:10px;">',
+      'Ти успішно пройшов терапію від сістер<br><br>Заборонено: не вірити в себе і їсти тверде<br> <br> <img  class="last-cat" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXpvN2p2NHE0YWI2ZHd0bmlrZHp3YXB2bTU2YTE5cmd4MjZ5eGd4dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XJWvfTX9h2M6BqGHMj/giphy.gif"  style="width:300px; border-radius:10px; margin: 0 auto"><br>Ти сильний. <br> Ти - людина і маєш право на слабкості',
   },
 ];
 
@@ -68,13 +71,13 @@ function showMood(mood) {
   const moodResult = document.getElementById("moodResult");
   if (mood === "good") {
     moodResult.innerHTML =
-      "Урааа! живем, живем 🌈<br><img class='cat-gif' src='https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWoyaG1oNTFsbDI3b201aTl0MDdkM2lrOXI2bXd0emcyM2R3djNiNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GeimqsH0TLDt4tScGw/giphy.gif' style='width:100%; border-radius:10px;'>";
+      "Урааа! Ти найкращий і найсильший <br><img class='cat-gif' src='https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjR0ZzlkMWV3eWJlZmo0NTFzYzJva3o4Z2htaWFzY2xiOTNreWpxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5Dg0E3yOryWE8/giphy.gif' style='width:100%; border-radius:10px;'>";
   } else if (mood === "meh") {
     moodResult.innerHTML =
-      "Цілющий кусь🐾<br><img class='cat-gif' src='https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHBhcmFmNGFwMzhwNWt4aHg2eG4xOGprNndxcXhmNnRjMDhlbWE5ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/108wBdjDIkQZb2/giphy.gif' style='width:100%; border-radius:10px;'>";
+      "Ти не маєш бути залізним. Я тебе підтримаю 24/7 в будь-якій ситуації<br><img class='cat-gif' src='https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExenYwY2J3cmtjamljczdkbmpmbmJ3YnFkcnk3MjBjYXI4MXpueDN0YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dvBgr7pA6FTJOMOALY/giphy.gif' style='width:100%; border-radius:10px;'>";
   } else {
     moodResult.innerHTML =
-      "Отримай порцію підтримки ❤️<br><img  class='cat-gif' src='https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif' style='width:100%; border-radius:10px;'>";
+      "Просто роби крок за кроком тут і зараз. Я вірю в тебе більше, ніж ти віриш в себе сам!<br><img  class='cat-gif' src='https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXRsZTBjdG5rY3kwZXljc214Z3gxMTEycWJ6bTQ3N3B1aWxibXNsOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9ijPxO1FYKhdC/giphy.gif' style='width:100%; border-radius:10px;'>";
   }
 }
 
